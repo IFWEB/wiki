@@ -41,4 +41,3 @@
 
 为了更好的管理，任何删除或修改的 html 文件，需在石墨文档中登记。石墨文档定期检查，以便及时清理无效文件。
 https://shimo.im/sheet/hb0ua1FftgMTV5jp
-![Alt text](./1489477750157.png)
