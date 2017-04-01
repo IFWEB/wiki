@@ -1,6 +1,6 @@
 ## 背景
-andriod手机webview中调用h5的页面的时候注入了一个native变量(js访问这个变量提供的方法可以调用手机app的功能)。但有时js访问native提示访问未定义的变量错误，原因是可能该变量还没有注入成功导致。  
-ios不存在这个问题，iOS webview不需要注入native变量，而是js和ios webview约定好native变量的调用方式，js中默认就会有native这个全局变量。  
+andriod手机webview中调用h5的页面的时候注入了一个native变量（js访问这个变量提供的方法可以调用手机app的功能）。但有时js访问native提示访问未定义的变量错误，原因是可能该变量还没有注入成功导致。   
+> 注：ios不存在这个问题，iOS webview不需要注入native变量，而是js和ios webview约定好native变量的调用方式，js中默认就会有native这个全局变量。  
 
 看一下android webview注入这个变量的代码
 ```
@@ -59,6 +59,3 @@ if(!window.native && $.bom.query("from") === "android") {//检测native
 	checkNative();
 }
 ```
-
-
-
