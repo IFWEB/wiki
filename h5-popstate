@@ -1,0 +1,44 @@
+### 使用popstate监听back按钮的普通处理流程
+```
+var timer = 0,
+  bool = false;
+
+function init() {
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+        bool = true;
+    }, 500);    
+    pushHistory();
+    bindEvent();
+};
+
+function pushHistory() {
+    var state = {
+        title: "title",
+        url: "#backtip"
+    };
+    window.history.pushState(state, "title", "#backtip");
+};
+
+function bindEvent() {
+    function popstate(e) {
+        if (bool) {
+            //这里做响应处理
+        }
+    }
+    window.addEventListener("popstate", popstate, false);
+};
+
+init();//初始化
+```
+假定从index.html页面跳转到charge_bind.html页面，charge_bind.html使用了上面这段代码。history记录结构为如下结构（栈）
+
+从charge_bind.html使用浏览器back，
+正常情况使用不会出现问题
+页面历史记录过程是index.html -> charge_bind.html -> charge_bind.html#backtip -> protocol.html
+从页面index.html进入charge_bind.html,charge_bind.html页面初始化代码如下
+```
+function init(){
+	
+}
+```
