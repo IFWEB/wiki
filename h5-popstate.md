@@ -58,5 +58,5 @@ url返回到charge_bind.html,表现为:页面返回但不刷新（不会初始�
 在back  
 返回到index.html  
   
-整体的back过程如下
+整体的back过程如下  
 ![Alt text](/img/history-back.png)
