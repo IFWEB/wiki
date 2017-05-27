@@ -46,7 +46,7 @@ url返回到charge_bind.html，表现为：页面返回但不刷新（不会初�
 ####android
 url返回到charge_bind.html#backtip，表现为：页面返回并刷新（会初始化），不响应popstate 
 这里因为执行了init，在history中又新添加了一个记录charge_bind.html#backtip 
-如果再back 
+如果再back  
 url返回到charge_bind.html#backtip，表现为：页面返回但不刷新（不会初始化）,响应popstate 
 再back 
 url返回到charge_bind.html,表现为:页面返回并刷新（会初始化）,不响应popstate 
