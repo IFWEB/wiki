@@ -40,20 +40,20 @@ init();//初始化
 此时如果从protocol.html使用浏览器返回Android和ios表现不一致。 
 #### ios
 url返回到charge_bind.html#backtip，表现为：页面返回但不刷新（不会初始化），响应popstate   
-如果再back 
-url返回到charge_bind.html，表现为：页面返回但不刷新（不会初始化），响应popstate 
-如果再back 
-返回到index.html 
+如果再back  
+url返回到charge_bind.html，表现为：页面返回但不刷新（不会初始化），响应popstate  
+如果再back  
+返回到index.html  
 
 #### android
-url返回到charge_bind.html#backtip，表现为：页面返回并刷新（会初始化），不响应popstate 
-这里因为执行了init，在history中又新添加了一个记录charge_bind.html#backtip 
-如果再back  
-url返回到charge_bind.html#backtip，表现为：页面返回但不刷新（不会初始化）,响应popstate 
-再back 
-url返回到charge_bind.html,表现为:页面返回并刷新（会初始化）,不响应popstate 
-这里因为执行了init，在history中又新添加了一个记录charge_bind.html#backtip 
-再back 
-url返回到charge_bind.html,表现为:页面返回但不刷新（不会初始化）,响应popstate 
-在back 
-返回到index.html 
+url返回到charge_bind.html#backtip，表现为：页面返回并刷新（会初始化），不响应popstate  
+这里因为执行了init，在history中又新添加了一个记录charge_bind.html#backtip  
+如果再back   
+url返回到charge_bind.html#backtip，表现为：页面返回但不刷新（不会初始化）,响应popstate  
+再back  
+url返回到charge_bind.html,表现为:页面返回并刷新（会初始化）,不响应popstate  
+这里因为执行了init，在history中又新添加了一个记录charge_bind.html#backtip  
+再back  
+url返回到charge_bind.html,表现为:页面返回但不刷新（不会初始化）,响应popstate  
+在back  
+返回到index.html  
