@@ -36,6 +36,7 @@ init();//初始化
 到新的protocol.html页面。history的记录如下。 
 
  
+ 
 此时如果从protocol.html使用浏览器返回Android和ios表现不一致。 
 #### ios
 url返回到charge_bind.html#backtip，表现为：页面返回但不刷新（不会初始化），响应popstate， 
