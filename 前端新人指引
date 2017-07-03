@@ -1,0 +1,71 @@
+加群：
+技术一部：322983516   研发中心：275053163
+<br  />
+微信群（找同事拉入）：
+我们前端
+农金圈工作群
+<br  />
+安装软件
+钉钉 foxmail evernote sublime  chrome eclipse photoshop fiddler node python2.7.10
+需要在钉钉上申请固态硬盘和内存条安装在电脑上。
+<br  />
+SVN 地址
+https://nfd-server02/svn/p2p
+账户：个人姓名拼音
+密码：nfd12345678
+<br  />
+共享服务器：
+     192.168.1.3     用户名：administrator     密码：nongfadai
+     192.168.1.4     用户名：administrator     密码：nongfadai
+			    用户名：share     		    密码：Nfd_123456
+<br  />
+编码规范
+http://imweb.github.io/CodeGuide/
+<br  />
+前端构建工具用的是百度的fis
+http://fis.baidu.com/fis3/docs/beginning/intro.html
+<br  />
+FIS demo：
+https://github.com/beyond-cheng/fis-demo
+<br  />
+sass 预编译
+http://sass-lang.com/documentation/file.SASS_REFERENCE.html
+<br  />
+图片压缩：（普通图片最好不要超过100KB,Banner不要超过120KB）
+https://tinypng.com/
+<br  />
+WIFI
+名称：njq    密码：nongjq2015
+<br  />
+TAPD
+找李冬冬开通
+<br  />
+百度统计账户
+账户名：农发贷    密码：nongfadai@123
+<br  />
+内部服务器.3/.5/.7
+root    nongfadai
+<br  />
+内部数据库密码：test123
+<br  />
+下班前写日报，日报发送给“前端开发部<qdkf@nongfadai.com>”，抄送给陈海彬
+每周需要在钉钉上提交周报
+每月需要在钉钉上提交月报
+<br  />
+   
+前端代码运行：  
+1.下载svn代码,如https://nfd-server02/svn/front/trunk  到工程D:/workspace
+2.命令行定位到对应工程，如pc，cmd运行: cd wockspace/pc  
+3.执行打包: cmd 运行fis3 imweb dev -wc  
+注：如果提示没有安装插件，则全局安装相应插件，安装命令：npm install 插件名称 -g
+4..在wockspace目录，安装node依赖: npm install
+5.在wockspace目录新打开一个命令行启动对应服务：node master pc -p 5005  
+注：pc 表示启动pc   -p配置服务端口号
+6.在浏览器访问localhost:5005就能看到pc首页了      
+7.如果要配置访问的服务器ip，定位到D:/workspace/node-dev\config\index.js中的ip配置。然后重启服务（第5步），然后在浏览器访问的页面左下角选择服务器，并点击刷新
+
+
+
+<br  />
+
+理财农场知识图谱：http://naotu.baidu.com/file/65d1c930ac90d3fae911147bdd3d7df2?token=92df4c029fbb6549
