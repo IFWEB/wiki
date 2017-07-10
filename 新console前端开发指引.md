@@ -40,13 +40,16 @@ mounted钩子在组件被计算时就会触发，无法多次触发。
     </div>
 </template>
 <script>
-import pageHead from '@/components/pageHead';
+//es6语法，相当于var pageHead=require('components/pageHead')
+import pageHead from 'components/pageHead';
+//es6语法，相当于module.exports = {}
 export default {
     data: function() {
         return {
         }
     },
     components: {
+    	//es6语法，相当于pageHead:pageHead
         pageHead
     },
     beforeRouteEnter: function(to, from, next) {
@@ -65,6 +68,7 @@ export default {
     },
 	methods:{
         getType: function() {
+	    //es6语法，var query = this.$route.query;
             let query = this.$route.query;
             return query.type || 'list';
         },
