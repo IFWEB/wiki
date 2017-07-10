@@ -20,11 +20,11 @@ map['_busiManage_cpgl_lcjhgl'] = function() {
 ```
 4. 编写组件对应vue文件代码：
 >注：
-1. style统一放到最后，调试的时候为了方便可以放在最前，提交都放在最后。
-2. css3尽量使用bootstrap排版，定制化的才写style。
-3. components对应放的是组件，以上代码用的是es6写法，统一用es6语法编写。
-4. beforeRouteEnter钩子函数会在路由进入后触发，只有写在route-view直接装载的vue文件才有，本例中pageHead.vue文件中就无法出发此钩子。
-5. mounted钩子在组件被计算时就会触发，无法多次触发。
+> style统一放到最后，调试的时候为了方便可以放在最前，提交都放在最后。
+> css3尽量使用bootstrap排版，定制化的才写style。
+> components对应放的是组件，以上代码用的是es6写法，统一用es6语法编写。
+> beforeRouteEnter钩子函数会在路由进入后触发，只有写在route-view直接装载的vue文件才有，本例中pageHead.vue文件中就无法出发此钩子。
+> mounted钩子在组件被计算时就会触发，无法多次触发。
 在build中的配置文件有配置路径@、src、index、assets、components
 ```javascript
             '@': resolve('src'),
