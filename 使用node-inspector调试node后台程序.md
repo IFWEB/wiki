@@ -12,3 +12,5 @@ childProcess.fork('./child-p.js');
 childProcess.fork('./child-p.js', [], {execArgv: ['--debug=5859']});
 ```
 通过URL http://127.0.0.1:8080/debug?port=5858 就可以进行调试主进程了，调试子进程使用你配置的debug监听端口即可。
+
+**自6.3版本起，Node.js提供了一个内置的基于DevTools的调试器，大部分不推荐使用Node Inspector**
