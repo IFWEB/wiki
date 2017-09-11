@@ -63,18 +63,18 @@ map['_sysManage_jsgl_yhzgl'] = function() {
 ````
 _sysManage_jsgl_yhzgl指的是后台下发的path拼接，分成三段:sysManage/jsgl/yhzgl，这些菜单最终是在数据库中配置的，配置数据库的我们自己做。稍后补充配置方法介绍的地址。
 
-###添加一个菜单分为三步：
-####一、配置数据库菜单和按钮权限：
+### 添加一个菜单分为三步：
+#### 一、配置数据库菜单和按钮权限：
 比如我们想新建“用户管理-》平台账户管理-》外部资产用户管理”
 命名菜单为“userCount/ptzhgl/outer”
 >注意：一级菜单谨慎添加，太多效率会下降。
 
 
-####二、在src/index/pages/下相应目录新建文件夹和.vue文件:
+#### 二、在src/index/pages/下相应目录新建文件夹和.vue文件:
 接以上的例子，在src/pages/index目录下依次新建：userManage->account->externalAsset->enter.vue（入口文件）
 >命名方法参见：console文件夹和文件命名规范
 
-####三、修改map.js配置，类似：
+#### 三、修改map.js配置，类似：
 ````
 // 用户管理
 map['_userCount_cgzhmk_khgl'] = function() {
