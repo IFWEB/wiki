@@ -75,7 +75,6 @@ _sysManage_jsgl_yhzgl指的是后台下发的path拼接，分成三段:sysManage
 >命名方法参见：console文件夹和文件命名规范
 
 ####三、修改map.js配置，类似：
->注意按顺序加到相应一级菜单下：
 ````
 // 用户管理
 map['_userCount_cgzhmk_khgl'] = function() {
@@ -88,7 +87,7 @@ map['_userCount_ptzhgl_outer'] = function() {
     return import ('index/userManage/account/externalAsset/enter.vue');
 };
 ````
-
+>注意，按顺序加到相应一级菜单下，这里加到了用户管理的后面。
 
 
 
