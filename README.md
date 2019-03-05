@@ -34,9 +34,9 @@ if(1){
 
 ### 这是三级标题
 
-![图片alt](图片地址 ''图片title'')
-[超链接名](超链接地址 "超链接title")
-<a href="超链接地址" target="_blank">超链接名</a>
+![IFWEB图片alt](https://github.com/IFWEB/wiki/blob/master/img/IFWEB.jpg ''图片title'')  
+[IFWEB/wiki的超链接](https://github.com/IFWEB/wiki "超链接title")  
+<a href="https://github.com/IFWEB/wiki" target="_blank">IFWEB/wiki的超链接</a>  
 
 表头|表头|表头
 ---|:--:|---:
