@@ -106,6 +106,6 @@ flex布局ie10+支持
 grid布局ie支持比较差，必须edge16+才支持的比较好  
 
 
-<a href="https://github.com/IFWEB/wiki/blob/master/css/左侧固定宽右侧自适应/demo.html" target="_blank">demo</a>
-上面几个布局效果如下  
+<a href="https://github.com/IFWEB/wiki/blob/master/css/左侧固定宽右侧自适应/demo.html" target="_blank">demo</a>  
+上面几个布局效果如下   
 ![左侧固定右侧自适应](https://github.com/IFWEB/wiki/blob/master/css/左侧固定宽右侧自适应/show.png)  
