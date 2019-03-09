@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			color: #fff;
+		}
+		.item{
+			margin-bottom: 30px;
+			overflow:hidden;/*解决内部元素浮动无法撑开父元素的问题,或者auto都行*/
+		}
+		.left{
+			width: 200px;
+		    background: red;
+		}
+		.right{
+			background: blue;
+		}
+
+		.float1 .left{
+			float: left;		   
+		}
+		.float1 .right{
+		    margin-left: 200px;		    
+		}
+
+		.float2 .left{
+			float: left;
+		}
+		.float2 .right{
+			overflow: auto;/*这一块需要添加，否则当float2-right整体宽度是全屏的宽度，虽然文字不会和左边块重叠。在IE和Firefox上问题比较明显*/
+		}
+
+
+		.position .left{
+			position: absolute;
+		}
+		.position .right{
+			margin-left: 200px;
+		}
+
+		.table{
+			display: table;
+			width: 100%;
+		}
+		.table .left{			
+			display: table-cell;
+		}
+		.table .right{
+			display: table-cell;
+		}
+
+
+		.calc .left{
+		    float: left;
+		}
+		.calc .right{
+		    float: right;
+		    width:calc(100% - 200px);
+		}
+
+
+		.flex {
+		    display: flex;
+		    align-items: flex-start;
+		}
+		.flex .left { 
+		    flex: 0 0 auto;
+		}
+		.flex .right {
+		    flex: 1 1 auto;
+		}
+
+
+		.grid {
+		    display: grid;
+		    grid-template-columns: 200px 1fr;
+		    align-items: start;
+		}
+		.grid .left {
+			box-sizing: border-box;
+		    grid-column: 1;
+		}
+		.grid .right {
+			box-sizing: border-box;
+		    grid-column: 2;
+		}
+	</style>
+</head>
+<body>
+	<div class="item float1">
+		<div class="left">左侧浮动宽为200</div>
+		<div class="right">margin-left为200</div>
+	</div>
+
+	<div class="item float2">
+		<div class="left">左侧浮动宽为200</div>
+		<div class="right">右侧overflow: auto;样式自动贴靠，利用BFC（块级格式化上下文）来实现</div>
+	</div>
+
+	<div class="item position">
+		<div class="left">左侧position:absolute宽度200</div>
+		<div class="right">右侧margin-left:200</div>
+	</div>
+
+	<div class="item table">
+		<div class="left">父元素display: table，左侧子元素display: table-cell，宽200</div>
+		<div class="right">右侧display: table-cell，宽自动适应</div>
+	</div>
+
+	<div class="item calc">
+		<div class="left">左侧浮动固定宽度200</div>
+		<div class="right">右侧浮动，width:calc(100% - 200px); calc是css3属性，ie9+支持。实际上两边可以不用浮动，用内联块display:inline-block也可以，但是需要解决幽灵空白问题，更复杂</div>
+	</div>
+
+	<div class="item flex">
+		<div class="left">父元素align-items: flex-start;，左侧子元素flex: 0 0 auto;，宽200</div>
+		<div class="right">右侧flex: 1 1 auto;，宽自动适应。 flex布局ie10+支持</div>
+	</div>
+
+	<div class="item grid">
+		<div class="left">父元素display: grid;grid-template-columns: 200px 1fr;，左侧子元素grid-column: 1;，宽200</div>
+		<div class="right">右侧grid-column: 2;宽自动适应。 grid布局ie支持比较差，必须edge16+才支持的比较好</div>
+	</div>
+</body>
+</html>
