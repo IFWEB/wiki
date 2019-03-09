@@ -12,9 +12,9 @@ body{
     background: blue;
 }
 ```
-# 方法一：左侧浮动方案,右侧利用div自动基充父元素特性自适应
+## 方法一：左侧浮动方案,右侧利用div自动基充父元素特性自适应
 主要有两种子方案
-## 右侧设置margin-left
+### 右侧设置margin-left
 ```
 .float1 .left{
     float: left;           
@@ -23,7 +23,7 @@ body{
     margin-left: 200px;         
 }
 ```
-## 右侧设置overflow: auto;利用BFC（块级格式化上下文）来实现
+### 右侧设置overflow: auto;利用BFC（块级格式化上下文）来实现
 什么是BFC?
 ```
 .float2 .left{
@@ -34,7 +34,7 @@ body{
 }
 ```
 
-# 方法二：左侧绝对定位方案，右侧利用div自动基充父元素特性自适应
+## 方法二：左侧绝对定位方案，右侧利用div自动基充父元素特性自适应
 这个方案和第一个方案很类似
 ```
 .position .left{
@@ -45,7 +45,7 @@ body{
 }
 ```
 
-# 方法三：父元素设置为table,两个子元素分别为表格列，第一列固定宽度
+## 方法三：父元素设置为table,两个子元素分别为表格列，第一列固定宽度
 ```
 .table{
     display: table;
@@ -59,7 +59,7 @@ body{
 }
 ```
 
-# 方法四：双浮动布局，右侧使用calc来计算实现
+## 方法四：双浮动布局，右侧使用calc来计算实现
 ```
 .calc .left{
     float: left;
@@ -72,7 +72,7 @@ body{
 calc是css3属性，ie9+支持。
 >实际上两边可以不用浮动，用双内联块display:inline-block也可以，但是需要解决幽灵空白问题，更复杂
 
-# 方法五：flex布局
+## 方法五：flex布局
 ```
 .flex {
     display: flex;
@@ -87,7 +87,7 @@ calc是css3属性，ie9+支持。
 ```
 flex布局ie10+支持
 
-# 方法六： grid布局
+## 方法六： grid布局
 ```
 .grid {
     display: grid;
