@@ -1,4 +1,4 @@
-### -----svn新建文件总是被忽略
+## svn新建文件总是被忽略
 **原因分析**   
 1. 全局忽略，查看Tortoise SVN--Settings--General 右边--Global ignore pattern，如果全局忽略中有配置则去除这个匹配。
 （但是往往不是，普通情况没有人会去动这个配置）  
