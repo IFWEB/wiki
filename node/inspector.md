@@ -39,10 +39,10 @@ To start debugging, open the following URL in Chrome:
 ```
 
 打开chrome的调试模式`chrome://inspect`,
-![打开inspect](https://github.com/IFWEB/wiki/blob/master/tools/img/inspect-chrome.jpg)   
+![打开inspect](https://github.com/IFWEB/wiki/blob/master/node/img/inspect-chrome.jpg)   
 
 二次进入可以在chrome程序员开发工具下面进入  
-![打开inspect](https://github.com/IFWEB/wiki/blob/master/tools/img/inspect-devTools.jpg)  
+![打开inspect](https://github.com/IFWEB/wiki/blob/master/node/img/inspect-devTools.jpg)  
 
 选择sources打断点调试  
-![调试inspect](https://github.com/IFWEB/wiki/blob/master/tools/img/inspect-sources.jpg)
+![调试inspect](https://github.com/IFWEB/wiki/blob/master/node/img/inspect-sources.jpg)
