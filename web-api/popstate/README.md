@@ -6,7 +6,7 @@
 - 浏览器返回可能做刷新（重新初始化页面），所以pushState需要做兼容，避免多次pushState
 - 不同浏览器对popstate监听的时机不同，正常浏览器只有从pushState的记录返回才会监听。但是ios上的微信和浏览器在返回到pushState的记录时还会做一次监听  
 
-我们具体看一下浏览器记录的变更流程。页面顺序是first>a>b。其中a做了pushState处理  
+浏览器记录的变更流程如下，页面顺序是first>a>b。其中a做了pushState处理  
 ![history状态图](https://github.com/IFWEB/wiki/blob/master/web-api/popstate/popstate-process.png)  
 **注意：ios上浏览器的history记录的length和state的变化**
 
