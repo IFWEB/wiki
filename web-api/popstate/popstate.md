@@ -10,7 +10,7 @@
 ![history状态图](https://github.com/IFWEB/wiki/blob/master/web-api/popstate/popstate-process.png)  
 **注意：ios上浏览器的history记录的length和state的变化**
 
-## popstate注意事项
+## demo中的兼容处理说明
 [页面的demo](https://github.com/IFWEB/wiki/tree/master/web-api/popstate/demo)中页面进入顺序是first>a>b  
 在a中做了pushState插入一个#backtip的记录，并监听popstate事件。做了两个兼容  
 ```
