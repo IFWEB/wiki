@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p id='pp'></p>
+<div >这是a页面</div>
+<a href="./b.html">跳转b页面</a>
+<script type="text/javascript" src="./zepto.min.js"></script>
+<script type="text/javascript" src="./vconsole.min.js"></script>
+<script type="text/javascript">
+    var vConsole = new VConsole();
+    function consoleHistory(flag){
+        var str = JSON.stringify({
+            flag: flag,
+            length: history.length,
+            state:history.state,
+            url: location.href
+        });
+        console.log(str);
+        return str;
+    }
+
+	document.getElementById('pp').innerHTML = consoleHistory('a');;
+    
+	
+    //添加地址历史，第一个参数可以调用history.state输出
+    //这块是为了做兼容，有的浏览器back会刷新页面，有的不会。如果从前一页返回到该页面，针对那些会刷新的页面就不再pushState
+    if(history.state !== 'backtip'){
+        //第一个参数会设置到history.state中去
+        window.history.pushState('backtip', "这是backtip处理", "#backtip");
+        consoleHistory('after pushState');
+    }
+    var flag = 1;//防重复
+    //添加监听,从a.html#backtip返回a.html时弹出对话框
+    window.addEventListener("popstate", function(){
+        consoleHistory('in popstate');
+        //兼容处理。ios从b页面返回也会进入这个监听，需要屏蔽掉
+        if(history.state && history.state === 'backtip'){
+            return;
+        }else{
+            //需要注意ios上safari可能屏蔽了弹窗或者监听popstate事件不支持弹窗。
+        	var msg = confirm('location.href:' + location.href + '；history.state:' + history.state);
+			if(msg == true){
+		        if(flag){//防重复,在手机上有时连续点击两次就会会触发两次,导致不对
+                    history.go(-1);
+                    flag = 0;
+                }
+		    }else{
+		        //从"#backtip"返回,点击“继续”需要重新进入"#backtip"中去
+                history.forward();
+		    }
+        }     
+    });
+
+</script>
+</body>
+</html>

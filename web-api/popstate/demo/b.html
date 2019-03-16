@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p id='pp'></p>
+<div >这是B页面</div>
+<script type="text/javascript" src="./zepto.min.js"></script>
+<script type="text/javascript" src="./vconsole.min.js"></script>
+<script type="text/javascript">
+	var vConsole = new VConsole();
+	function consoleHistory(flag){
+        var str = JSON.stringify({
+            flag: flag,
+            length: history.length,
+            state:history.state,
+            url: location.href
+        });
+        console.log(str);
+        return str;
+    }
+	document.getElementById('pp').innerHTML = consoleHistory('b');
+</script>
+</body>
+</html>
