@@ -4,7 +4,7 @@
 出现情况：
 	使用 zepto 或 jQuery 的情况下，给一个元素添加click事件，如果事件是委托到 document 或 body 上，并且委托的元素是默认不可点击的（如 div, span 等），此时 click 事件在IOS safari中会失效。
 
-### 案例如下：
+#### 案例如下：
 ```html
 <!DOCTYPE html>
 <html>
@@ -34,7 +34,7 @@
 </html>
 ```
 
-### 解决方案
+#### 解决方案
 1. 将 `click` 事件直接绑定到目标​元素（​​即 `target`）上。
 2. 将目标​元素换成 `&lt; a>` 或者 `button` 等可点击的元素。
 3. 将 `click` 事件委托到非 `document` 或 `body` 的父级元素上。
