@@ -12,7 +12,7 @@
 
 https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2ebfe5f20389c64a&redirect_uri=encodeURIComponent('http:')%2F%2Fm.lcfarm.com%2Factivity%2F2019fourYears%2Fziweiguan%2Fziweiguan.html%3F&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect
 
-参数 	    是否必须	 说明
+参数 	    是否必须	 说明 
 appid	        是	 公众号的唯一标识
 redirect_uri	是	 授权后重定向的回调链接地址， 请使用 urlEncode 对链接进行处理
 response_type	是	 返回类型，请填写code

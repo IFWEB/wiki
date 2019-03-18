@@ -84,7 +84,7 @@ JSSDK使用步骤
             }
         });
 
-        wx.onMenuShareQQ({
+        wx.onMenuShareQQ({ 
             title: share.title, // 分享标题
             desc: "我在布谷农场投资，给你发加金福利和新手红包啦！", // 分享描述
             link: addParam(share.linkUrl, {
