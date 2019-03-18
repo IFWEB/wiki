@@ -1,9 +1,11 @@
-###IOS safari 点击失效详解
-出现情况：
-	使用zepto 或 jQuery的情况下，给一个元素添加click事件，如果事件是委托到 document 或 body 上，并且委托的元素是默认不可点击的（如 div, span 等），此时 click 事件在IOS safari中会失效
+# click异常问题分析
 
-####案例如下：
-```
+## IOS safari 点击失效详解
+出现情况：
+	使用 zepto 或 jQuery 的情况下，给一个元素添加click事件，如果事件是委托到 document 或 body 上，并且委托的元素是默认不可点击的（如 div, span 等），此时 click 事件在IOS safari中会失效。
+
+### 案例如下：
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,9 +34,9 @@
 </html>
 ```
 
-####解决办法有五种可供选择
-- 将 `click` 事件直接绑定到目标​元素（​​即 `target`）上
-- 将目标​元素换成 `&lt; a>` 或者 `button` 等可点击的​元素
-- 将 `click` 事件委托到​​​​​非 `document` 或 `body` 的​​父级元素上
-- 给​目标元素加一条样式规则 `cursor: pointer`;
-- 使用原生方式委托事件
+### 解决方案
+1. 将 `click` 事件直接绑定到目标​元素（​​即 `target`）上。
+2. 将目标​元素换成 `&lt; a>` 或者 `button` 等可点击的元素。
+3. 将 `click` 事件委托到非 `document` 或 `body` 的父级元素上。
+4. 给目标元素加一条样式规则 `cursor: pointer`。
+5. 使用原生方式委托事件。
