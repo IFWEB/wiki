@@ -1,5 +1,5 @@
 ## 清除浮动实例
-![clear的详细描述](https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear)  
+[clear的详细描述](https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear)  
 目前在使用中主要用在清除浮动，撑开父元素。主要有两种方式：**伪类方式**和 **清除浮动节点方式**  
 
 
