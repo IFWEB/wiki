@@ -41,7 +41,9 @@
 		}
 
 
-
+		.position{
+			min-height: 295px;
+		}
 		.position .left{
 			position: absolute;
 		}
@@ -108,7 +110,7 @@
 		<div class="right">右侧样式自动贴靠，利用BFC（块级格式化上下文）来实现。但是右边文本高度大于左边的高度会呈现右侧包裹左侧的情况。使用overflow:auto;来处理</div>
 	</div>
 
-	<div class="item position" style="min-height: 295px;">
+	<div class="item position">
 		<div class="left">左侧position:absolute宽度50,父元素的高度需要自己定义，脱离文档流的元素无法将父元素撑开</div>
 		<div class="right">右侧margin-left:50</div>
 	</div>
