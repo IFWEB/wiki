@@ -17,8 +17,14 @@ body{
 ## 方法一：左侧浮动方案,右侧利用div自动基充父元素特性自适应
 主要有两种子方案（后续可能需要清除浮动）   
 ```
-//父元素使用来清除浮动，撑开父元素
-.clearFloat:before,.clearFloat:after{
+//父元素使用来清除浮动，撑开父元素。正常来说伪元素使用"::",但是老版本ie8及以下不支持,所以使用了":"方式
+.clearfix:before,.clearfix:after{
+    content: "";
+    display: block; 
+    clear: both;
+}
+//更复杂的的方式如下
+.clearfix:before,.clearfix:after{
     content: ".";
     clear: both;
     display: block;

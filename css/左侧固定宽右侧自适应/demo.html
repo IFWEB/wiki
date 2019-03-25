@@ -18,11 +18,10 @@
 		.right{
 			background: blue;
 		}
-		.clearFloat:before,.clearFloat:after{
-			content: ".";
-		    clear: both;
-		    display: block;
-		    font-size: 0;/*或者height: 0px*/
+		.clearfix:before,.clearfix:after{
+		  	content: "";
+			display: block; 
+			clear: both;
 		}
 
 
@@ -100,12 +99,12 @@
 	</style>
 </head>
 <body>
-	<div class="item float1 clearFloat">
+	<div class="item float1 clearfix">
 		<div class="left">左侧浮动宽为50</div>
 		<div class="right">margin-left为50</div>
 	</div>
 
-	<div class="item float2 clearFloat">
+	<div class="item float2 clearfix">
 		<div class="left">左侧浮动宽为50</div>
 		<div class="right">右侧样式自动贴靠，利用BFC（块级格式化上下文）来实现。但是右边文本高度大于左边的高度会呈现右侧包裹左侧的情况。使用overflow:auto;来处理</div>
 	</div>
@@ -120,7 +119,7 @@
 		<div class="right">右侧display: table-cell，宽自动适应</div>
 	</div>
 
-	<div class="item calc clearFloat">
+	<div class="item calc clearfix">
 		<div class="left">左侧浮动固定宽度50</div>
 		<div class="right">右侧浮动，width:calc(100% - 50px); calc是css3属性，ie9+支持。实际上两边可以不用浮动，用内联块display:inline-block也可以，但是需要解决幽灵空白问题，更复杂</div>
 	</div>
