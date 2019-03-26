@@ -1,5 +1,3 @@
-# click异常问题分析
-
 ## IOS safari 点击失效详解
 出现情况：
 	使用 zepto 或 jQuery 的情况下，给一个元素添加click事件，如果事件是委托到 document 或 body 上，并且委托的元素是默认不可点击的（如 div, span 等），此时 click 事件在IOS safari中会失效。
@@ -40,3 +38,13 @@
 3. 将 `click` 事件委托到非 `document` 或 `body` 的父级元素上。
 4. 给目标元素加一条样式规则 `cursor: pointer`。
 5. 使用原生方式委托事件。
+
+
+## click呼起电话异常分析
+
+#### 现象和原因分析
+呼起电话链接\<a href="tel:11111">联系客服\</a>，呼起电话是这个标签的默认功能，响应click事件时触发。当文案"联系客服"的父节点（除开document外）绑定click事件的处理中执行e.preventDefault()，会导致呼起电话失败。
+
+#### 解决方案
+1. 去除 e.preventDefault()。 
+2. 使用其他事件，比如tap事件代替click来执行想要的处理，保证click通畅。
