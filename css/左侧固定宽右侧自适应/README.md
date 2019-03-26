@@ -1,11 +1,13 @@
-所有的布局方法规定左侧固定宽度为200px。右侧自动适应。  
+所有的布局方法规定左侧固定宽度为50px。右侧自动适应。  
 左右侧通用样式如下
 ```
 body{
     color: #fff;
+    margin: 0;
+    padding: 0;
 }
 .left{
-    width: 200px;
+    width: 50px;
     background: red;
 }
 .right{
@@ -13,14 +15,29 @@ body{
 }
 ```
 ## 方法一：左侧浮动方案,右侧利用div自动基充父元素特性自适应
-主要有两种子方案
+主要有两种子方案（后续可能需要清除浮动）   
+```
+//父元素使用来清除浮动，撑开父元素。正常来说伪元素使用"::",但是老版本ie8及以下不支持,所以使用了":"方式
+.clearfix:before,.clearfix:after{
+    content: "";
+    display: block; 
+    clear: both;
+}
+//更复杂的的方式如下
+.clearfix:before,.clearfix:after{
+    content: ".";
+    clear: both;
+    display: block;
+    font-size: 0;/*或者height: 0px*/
+}
+```
 ### 右侧设置margin-left
 ```
 .float1 .left{
     float: left;           
 }
 .float1 .right{
-    margin-left: 200px;         
+    margin-left: 50px;         
 }
 ```
 ### 右侧设置overflow: auto;利用BFC（块级格式化上下文）来实现
@@ -30,18 +47,22 @@ body{
     float: left;
 }
 .float2 .right{
-    overflow: auto;/*这一块需要添加，否则当float2-right整体宽度是全屏的宽度，虽然文字不会和左边块重叠。在IE和Firefox上问题比较明显*/
+    overflow: auto;/*这是一个种让BFC中右侧不包裹左侧的方式（当右侧高度高于左侧会出现的包裹情况），overflow: hidden也可以*/
 }
 ```
 
 ## 方法二：左侧绝对定位方案，右侧利用div自动基充父元素特性自适应
-这个方案和第一个方案很类似
+这个方案和第一个方案很类似,需要注意的是父元素的高度需要自己定义，脱离文档流的元素无法将父元素撑开
 ```
+/*父元素定义一个最小高度，这个高度应该不小于左侧元素高度*/
+.position{
+    min-height: 295px;
+}
 .position .left{
     position: absolute;
 }
 .position .right{
-    margin-left: 200px;
+    margin-left: 50px;
 }
 ```
 
@@ -66,7 +87,7 @@ body{
 }
 .calc .right{
     float: right;
-    width:calc(100% - 200px);
+    width:calc(100% - 50px);
 }
 ```
 calc是css3属性，ie9+支持。
@@ -91,7 +112,7 @@ flex布局ie10+支持
 ```
 .grid {
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 50px 1fr;
     align-items: start;
 }
 .grid .left {
