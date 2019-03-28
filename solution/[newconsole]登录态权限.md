@@ -14,7 +14,10 @@
   前端提交userName、password和验证码信息，校验验证码正确后，调用dubbo登录服务判断是否登录;若登录失败，返回给前端密码错误；若登录成功，dubbo 返回用户个人信息useInfo和用户权限列表uriList，进行下一步。
 
 ## step2: 存储userInfo、uriList、isLogin
-  产生一个通用唯一标识符作为session; 将userInfo、usiList、isLogin存储至redis，并将过期时间设置为30分钟。存储的key和value分别为： 
+  产生一个通用唯一标识符作为session; 将userInfo、usiList、isLogin存储至redis，并将过期时间设置为30分钟。存储的key和value分别为：
+  
+  
+  
 | key   | value   |    | 
 |:----|:----|:----|
 | userInfo:userId   | userInfo   | userId为用户id,userInfo为dubbo返回的用户个人信息，其中包含插入的uuid   | 
