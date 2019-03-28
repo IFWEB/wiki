@@ -27,7 +27,7 @@
  
 ## step3: 签名session并设置cookie。
   使用secretKey签名session等到签名之后的signedSession。这里的secretKey存储在node-console服务内存中。设置cookie,并将cookie过期时间设为30分钟,set-cookie:session=signedSession;HttpOnly;maxAge:30*60*1000，返回给前端：登录成功。
-# 权限鉴权
+
 # 用户鉴权
 ## step1: 验证session是否有效且未过期
   前端cookie中携带session请求node-cosole服务；先使用secretKey验证session。若验证失败，表示sessin无效，返回给前端：未登录，若验证成功，表示session有效，查询redis中是否存在userInfo:session，若存在，表示session未过期，继续进行下一步，若不存在，表示session已过期，返回前端：登录已过期。
