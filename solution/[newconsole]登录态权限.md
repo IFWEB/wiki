@@ -41,3 +41,4 @@
 ## step4: 更新redis中userInfo、uriList和isLogin过期时间，更新cookie中session的过期时间   
 
 ![图片](https://github.com/IFWEB/wiki/blob/master/img/%E7%99%BB%E5%BD%95%E6%80%81/console.png)
+![图片](https://github.com/IFWEB/wiki/blob/master/img/%E7%99%BB%E5%BD%95%E6%80%81/session.png)
