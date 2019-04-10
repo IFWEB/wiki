@@ -9,6 +9,7 @@
 建立全局的软链接（{Node Path}是指node实际解压目录，如：/usr/local/node-v6.10.0-linux-x64）  
 >ln -s /{Node Path}/bin/npm /usr/local/bin/   
 >ln -s /{Node Path}/bin/node /usr/local/bin/  
+
 验证    
 >node -v
 
