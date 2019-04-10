@@ -20,10 +20,12 @@
 **方法一：单独卸载**
 卸载npm    
 >sudo npm uninstall npm -g
+
 可能会报“sudo: npm: command not found”，那么建议手动卸载“删除安装包”  
 
 卸载node  
 >yum remove nodejs npm -y 
+
 无论这个方法成功与否，一般都需要用方法二查看有没有残留
 
 
