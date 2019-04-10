@@ -16,7 +16,7 @@
 
 
 
-## node卸载
+## node、npm卸载
 **方法一：单独卸载**  
 卸载npm    
 >sudo npm uninstall npm -g
