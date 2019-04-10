@@ -17,7 +17,7 @@
 
 
 ## node卸载
-**方法一：单独卸载**
+**方法一：单独卸载**  
 卸载npm    
 >sudo npm uninstall npm -g
 
@@ -30,11 +30,11 @@
 
 
 **方法二：到目录中删除**  
-进入 /usr/local/lib 删除所有 node 和 node_modules文件夹
-进入 /usr/local/include 删除所有 node 和  node_modules 文件夹
-进入 /usr/local/bin 删除 node 的可执行文件node和npm
+进入 /usr/local/lib 删除所有 node 和 node_modules文件夹  
+进入 /usr/local/include 删除所有 node 和  node_modules 文件夹  
+进入 /usr/local/bin 删除 node 的可执行文件node和npm  
 
-检查 ~ 文件夹里面的"local"   "lib"  "include"  文件夹，然后删除里面的所有  "node" 和  "node_modules" 文件夹
+检查 ~ 文件夹里面的"local"   "lib"  "include"  文件夹，然后删除里面的所有  "node" 和  "node_modules" 文件夹  
 
 
 ## node 相关命令
@@ -42,6 +42,6 @@
 
 
 ## npm 相关命令
-查看npm环境变量：npm config list  
+查看npm环境变量：npm config list    
 npm 安装路径: npm config get prefix; npm config set prefix *
 
