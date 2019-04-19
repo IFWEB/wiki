@@ -17,7 +17,7 @@
 其他解压命令：    
 1、*.tar 用 tar –xvf 解压   
 2、*.gz 用 gzip -d或者gunzip 解压   
-3、*.tar.gz和*.tgz 用 tar –xzf 解压   
+3、*.tar.gz和*.tgz 用 tar -xzvf解压   
 4、*.bz2 用 bzip2 -d或者用bunzip2 解压   
 5、*.tar.bz2用tar –xjf 解压   
 6、*.Z 用 uncompress 解压   
