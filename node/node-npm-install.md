@@ -1,6 +1,6 @@
 ## node安装 
 环境是centOS
->wget https://nodejs.org/download/release/v6.10.0/node-v6.10.0-linux-x64.tar.gz  
+>wget https://nodejs.org/download/release/v6.10.0/node-v6.10.0-linux-x64.tar.xz  
 
 或者手动下载然后拷贝到本地  
 解压到当前目录：（推荐/usr/local）  
